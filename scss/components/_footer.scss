@@ -1,0 +1,107 @@
+
+.footer {
+    background: #1A242F;
+    padding-top: clamp(1.875rem, -0.125rem + 10vw, 8.75rem);
+    
+    
+    
+
+    .main-footer__container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: clamp(1.875rem, -14.494rem + 26.19vw, 8.75rem);
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    &__main {
+        padding-bottom: clamp(1.875rem, 0.784rem + 5.45vw, 5.625rem);
+    }
+
+    &__block {
+        @media (max-width: 992px) {
+            grid-column: 1/5;
+            &:not(:first-child) {
+                grid-row: 2/3;
+                grid-column: auto;
+            }
+        }
+    }
+
+    &__text {
+        
+        margin: 22px 0 32px;
+        @media (min-width: 992px) {
+            width: 340px;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @media (max-width: 600px) {
+            justify-content: center;
+        }
+    }
+
+    &__social {
+        svg {
+            fill: #555E68;
+            transition: all .2s;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        border-top: 1px solid #303A33;
+        padding: 15px 0;
+        .copyright__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: 690px) {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    }
+}
+
+
+.links-footer {
+
+    &__header {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 1.26;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        margin-bottom: 11px;
+    }
+
+    &__link {
+        white-space: nowrap;
+        transition: all .2s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
